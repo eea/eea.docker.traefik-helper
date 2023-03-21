@@ -58,7 +58,7 @@ if [ -d /etc/prometheus ]; then
 fi
 
 # make sure grafana has correct permission
-if [ -d /var/lib/grafana ];
+if [ -d /var/lib/grafana ]; then
 
 	chown 472:0 /var/lib/grafana
 	chmod 755 /var/lib/grafana
