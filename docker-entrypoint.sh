@@ -42,7 +42,9 @@ if [[ "$GEOBLOCKING" == "true" ]]; then
          unzip IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP
          if [ $? -eq 0 ]; then
 	   echo "Extracted archive, moving new file to plugin location"
+	   ls -ltr IP2LOCATION-LITE-DB1.IPV6.BIN
 	   mv IP2LOCATION-LITE-DB1.IPV6.BIN /plugins-local/src/github.com/kucjac/traefik-plugin-geoblock/
+	   ls -ltr /plugins-local/src/github.com/kucjac/traefik-plugin-geoblock/
          fi
    fi
    cd /plugins-local
