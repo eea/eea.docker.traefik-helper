@@ -1,7 +1,7 @@
 FROM debian:10-slim
 
 RUN apt-get update -q \
- && apt-get install -y --no-install-recommends openssl unzip git wget \
+ && apt-get install -y --no-install-recommends ca-certificates unzip git wget \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* 
 
