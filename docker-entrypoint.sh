@@ -32,6 +32,7 @@ if [[ "$GEOBLOCKING" == "true" ]]; then
    fi
 
    cd /plugins-local
+   rm -rf temp
    mkdir temp
    cd temp
    echo "Updating IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP file"
@@ -43,14 +44,22 @@ if [[ "$GEOBLOCKING" == "true" ]]; then
 	   echo "Extracted archive, moving new file to plugin location"
 	   mv IP2LOCATION-LITE-DB1.IPV6.BIN /plugins-local/src/github.com/kucjac/traefik-plugin-geoblock/
          fi
-   fi  
-   cd ..
+   fi
+   cd /plugins-local
    rm -rf temp
 
 fi
 
-	 
-/ add kibana configuration
 
-/ make sure prometheus has correct permissions
+# make sure prometheus has correct permissions
+if [ -d /etc/prometheus ]; then
+	chown 65534:65534 /etc/prometheus
+	chmod 755 /etc/prometheus
+fi
 
+# make sure grafana has correct permission
+if [ -d /var/lib/grafana ];
+
+	chown 472:0 /var/lib/grafana
+	chmod 755 /var/lib/grafana
+fi
