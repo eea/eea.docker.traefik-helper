@@ -18,8 +18,8 @@ if [[ "$GEOBLOCKING" == "true" ]]; then
 	
    
    cd /plugins-local/src
-   
-   if [ $(grep github.com/kucjac/traefik-plugin-geoblock /plugins-local/versions.log | tail -n 1 | grep "- ${GEOBLOCKING_VERSION}$" | wc -l) -eq 0 ]; then
+
+   if [ -f /plugins-local/versions.log ] && [ $(grep github.com/kucjac/traefik-plugin-geoblock /plugins-local/versions.log | tail -n 1 | grep "- ${GEOBLOCKING_VERSION}$" | wc -l) -eq 0 ]; then
 	   echo "Did not find geoblocking plugin, or found old version, making sure the directory is empty to be cloned from github"
 	   rm -rf github.com/kucjac/traefik-plugin-geoblock
    fi
