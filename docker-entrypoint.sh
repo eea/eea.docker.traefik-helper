@@ -28,7 +28,7 @@ if [[ "$GEOBLOCKING" == "true" ]]; then
    if [ ! -d github.com/kucjac/traefik-plugin-geoblock ]; then
       echo "Cloning geoblocking plugin, version ${GEOBLOCKING_VERSION}"
       git clone -b ${GEOBLOCKING_VERSION} https://github.com/kucjac/traefik-plugin-geoblock.git github.com/kucjac/traefik-plugin-geoblock
-      echo "$date - github.com/kucjac/traefik-plugin-geoblock - ${GEOBLOCKING_VERSION}" >> /plugins-local/versions.log
+      echo "$(date) - github.com/kucjac/traefik-plugin-geoblock - ${GEOBLOCKING_VERSION}" >> /plugins-local/versions.log
    fi
 
    cd /plugins-local
