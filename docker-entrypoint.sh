@@ -14,7 +14,7 @@ fi
 mkdir -p /plugins-local/src
 
 
-if [[ "$GEOBLOCKING" == "true" ]]; then
+if [[ "$TRAEFIK_GEOBLOCK" == "true" ]]; then
 	
    
    cd /plugins-local/src
