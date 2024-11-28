@@ -13,6 +13,8 @@ fi
 
 mkdir -p /plugins-local/src
 
+GEOBLOCKING_VERSION="${GEOBLOCKING_VERSION:-v0.2.4}"
+
 
 if [[ "$TRAEFIK_GEOBLOCK" == "true" ]]; then
 	
