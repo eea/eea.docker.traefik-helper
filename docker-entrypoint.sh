@@ -65,7 +65,7 @@ if [ -d /etc/prometheus ]; then
 fi
 
 if [ -d /prometheus ]; then
-        chown 65534:65534 /etc/prometheus
+        chown 65534:65534 /prometheus
 fi
 
 # make sure grafana has correct permission
